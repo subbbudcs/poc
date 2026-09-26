@@ -1,18 +1,14 @@
-module "naming" {
-  source = "./modules/naming"
+terraform {
+  required_version = ">= 1.0"
 
-  environment = var.environment
-  opco        = var.opco
-  application = var.application
-  role        = var.role
-  number      = var.number
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 4.0"
+    }
+  }
 }
 
-resource "azurerm_resource_group" "rg" {
-  name     = module.naming.name
-  location = var.location
-
-  lifecycle {
-    ignore_changes = [tags]
-  }
+provider "azurerm" {
+  features {}
 }

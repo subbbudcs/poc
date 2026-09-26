@@ -17,3 +17,7 @@ variable "role" {
 variable "number" {
   type = string
 }
+
+variable "location" {
+  type = string
+}
