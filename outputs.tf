@@ -1,3 +1,9 @@
 output "resource_group_name" {
-  value = azurerm_resource_group.main_rg.name
+  description = "The name of the created Azure Resource Group"
+  value       = azurerm_resource_group.rg.name
+}
+
+output "resource_group_location" {
+  description = "The location of the created Azure Resource Group"
+  value       = azurerm_resource_group.rg.location
 }
