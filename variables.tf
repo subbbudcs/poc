@@ -7,4 +7,5 @@ variable "opco" {
 }
 
 variable "application" {
-  type 
+  type = string
+}
